@@ -21,7 +21,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: elbek_ai_binary
-          path: ./elbek_ai
+          path: elbek_ai
+
 
 
 
