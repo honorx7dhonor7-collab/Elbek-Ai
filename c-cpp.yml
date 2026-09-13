@@ -11,17 +11,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Make / GCC
+      - name: Set up GCC
         run: sudo apt-get update && sudo apt-get install -y build-essential
 
       - name: Compile Elbek AI
         run: g++ main.cpp -o elbek_ai
 
-      - name: Upload binary
-        uses: actions/upload-artifact@v4
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
         with:
           name: elbek_ai_binary
-          path: ./elbek_ai
+          path: elbek_ai
+
 
 
 
